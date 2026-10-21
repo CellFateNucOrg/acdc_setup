@@ -6,7 +6,7 @@ The only difficult thing is that cell-acdc has a very specific data structure, a
 
 Since most of the heavy-lifting (deconvolution and segmentation) was performed before you use cell-acdc, you might find it easier to install cell acdc locally on your machine. As long as you have enough RAM to load the different channels and masks all at once into memory, then working like this with izbkingston mounted as a network drive might be easier/faster. But if your personal computer cannot cope, then you can use it from teh server, which requires a few more steps described below.
 
-# Installing cell acdc
+## A. Installing cell acdc
 
 Up to date instructions for installing and using [cell-acdc](https://github.com/SchmollerLab/Cell_ACDC/tree/main) are available in the [detailed documentation](https://cell-acdc.readthedocs.io/en/latest/index.html), so if the commands here do not work, you might need to update what needs to be done from there.
 
@@ -18,7 +18,7 @@ Up to date instructions for installing and using [cell-acdc](https://github.com/
 
 
 
-## Before you start cell-acdc
+## B. Before you start cell-acdc
 
 1. Before you can run cell-acdc on the server, you need X windows to be active on your computer. For mac that means having **XQuartz** installed (and maybe iTerm instead of the normal terminal window, not sure), and for windows that means installing **Xming** and having Xlaunch active, as well as putty to connect to the server.
 2. Make sure you have a conda environment called acdc with acdc installed (see above).
@@ -40,7 +40,7 @@ Your data should be organised as follows, where <src> is the name of the folder 
                 anotherfile_dw_mask.tif
 ```
 
-## Setting up the cell-acdc data structure
+## C. Setting up the cell-acdc data structure
 
 Clone this repository: `git clone `
 
@@ -52,7 +52,7 @@ sbatch setup_acdc.sh
 
 Your files with the acdc correct file structure will be placed in a sub directory called acdc. 
 
-## Running cell-acdc on the server
+## D. Running cell-acdc on the server
 
 1. Login to the server using `ssh -X username@izblisbon.izb.unibe.ch` the -X option is important to allow you to start X windows and the gui for ACDC.
 2. Reserve a compute node with the following command: `salloc --x11 --mem=32GB --time=10:00:00 -p all --ntasks=2` the --x11 is again important for x windows forwarding. You can modify the time or memory requested. there is no need for GPUs since you have already segmented the files.

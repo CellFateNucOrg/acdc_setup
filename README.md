@@ -61,4 +61,7 @@ Your files with the acdc correct file structure will be placed in a sub director
 3. Activate the acdc environment: `mamba activate acdc`.
 4. Start acdc by typing `acdc`. It may take a while to start up.
 
+## D. Finishing a session on the server
+1. Close the gui
+2. Close your interactive session on the compute  node by typing `exit`. (otherwise you keep those resources busy until the time you allocated is up).
 

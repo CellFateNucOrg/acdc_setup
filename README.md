@@ -42,7 +42,7 @@ Your data should be organised as follows, where <src> is the name of the folder 
 
 ### Setting up the cell-acdc data structure
 
-Cell acdc has a very specific data structure that must be followed for you to use it. It does have its own data prep modules but since we need to add our own segmentation, it is easier doing it all with our own script. 
+Cell acdc has a very specific data structure that must be followed for you to use it. It does have its own data prep modules but since we need to add our own segmentation, it is easier doing it all with our own script that uses the data structure described above to create the right structure for acdc. 
 
 Clone this repository: `git clone git@github.com:CellFateNucOrg/acdc_setup.git`
 

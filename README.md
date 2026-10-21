@@ -65,3 +65,10 @@ Your files with the acdc correct file structure will be placed in a sub director
 1. Close the gui
 2. Close your interactive session on the compute  node by typing `exit`. (otherwise you keep those resources busy until the time you allocated is up).
 
+## E. Using cell-acdc
+
+You can directly jump to the "Launch GUI" button to use the gui with your data.
+
+There are a lot of great features you can do very easily on the gui, especially if you learn the keyboard shortcuts - hover over the buttons to get instructions, and check out the [user manual]("https://cell-acdc.readthedocs.io/en/latest/tooltips.html").  
+
+I particularly love the auto-pilot feature that lets you scroll through the segmented masks one by on at high magnification without having to zoom in and out all the time. 

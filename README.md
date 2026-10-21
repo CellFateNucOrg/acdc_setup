@@ -25,23 +25,38 @@ Up to date instructions for installing and using [cell-acdc](https://github.com/
 3. Your images have been deconvoled with our [Deconwolf pipeline](https://github.com/CellFateNucOrg/Deconwolf)
 4. Your nuclei have been segmented with our [Cellpose-SAM pipeline](https://github.com/CellFateNucOrg/CPSAM)
 
+Your data should be organised as follows, where <src> is the name of the folder in which your .nd2 files are.
 
+```
+    <src>/
+        somefile.nd2
+        anotherfile.nd2
+        dw/
+            somefile_dw.tif
+            somefile_dw_max.tif    ← skipped
+            anotherfile_dw.tif
+            masks/
+                somefile_dw_mask.tif
+                anotherfile_dw_mask.tif
+```
 
+## Setting up the cell-acdc data structure
 
-Your data is organised as follows:
+Clone this repository: `git clone `
 
-
-
-You start off with all your .nd2 files in a particular directory.
-
-1) deconvolve your images. they should be in a subdirectory called dw/ and the files should have the same name but with a _dw.tif ending
-
-2) perform segmentation with cellpose same. the files should be in the subdirectory dw/masks/ and have a _dw_mask.tif ending, or they could be in subfolders with the channel name, e.g dw/masks/masks_GFP/*_dw_mask.tif
-
-3) edit the setup_acdc.sh script to point src_dir to the directory where you have the .nd2 files. then run it on slurm
+Edit the setup_acdc.sh script to point src_dir to the directory where you have the .nd2 files. then run it on slurm:
 
 ```
 sbatch setup_acdc.sh
 ```
 
-your files with the acdc correct setup will be placed in a sub directory called acdc. 
+Your files with the acdc correct file structure will be placed in a sub directory called acdc. 
+
+## Running cell-acdc on the server
+
+1. Login to the server using `ssh -X username@izblisbon.izb.unibe.ch` the -X option is important to allow you to start X windows and the gui for ACDC.
+2. Reserve a compute node with the following command: `salloc --x11 --mem=32GB --time=10:00:00 -p all --ntasks=2` the --x11 is again important for x windows forwarding. You can modify the time or memory requested. there is no need for GPUs since you have already segmented the files.
+3. Activate the acdc environment: `mamba activate acdc`.
+4. Start acdc by typing `acdc`. It may take a while to start up.
+
+

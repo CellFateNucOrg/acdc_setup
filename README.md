@@ -44,9 +44,9 @@ Your data should be organised as follows, where <src> is the name of the folder 
 
 Cell acdc has a very specific data structure that must be followed for you to use it. It does have its own data prep modules but since we need to add our own segmentation, it is easier doing it all with our own script. 
 
-Clone this repository: `git clone `
+Clone this repository: `git clone git@github.com:CellFateNucOrg/acdc_setup.git`
 
-Edit the setup_acdc.sh script to point src_dir to the directory where you have the .nd2 files. then run it on slurm:
+Edit the *setup_acdc.sh* script to point src_dir to the directory where you have the .nd2 files. then run it on slurm:
 
 ```
 sbatch setup_acdc.sh
@@ -54,7 +54,7 @@ sbatch setup_acdc.sh
 
 Your files with the acdc correct file structure will be placed in a sub directory called acdc. 
 
-## D. Running cell-acdc on the server
+## C. Running cell-acdc on the server
 
 1. Login to the server using `ssh -X username@izblisbon.izb.unibe.ch` the -X option is important to allow you to start X windows and the gui for ACDC.
 2. Reserve a compute node with the following command: `salloc --x11 --mem=32GB --time=10:00:00 -p all --ntasks=2` the --x11 is again important for x windows forwarding. You can modify the time or memory requested. there is no need for GPUs since you have already segmented the files.

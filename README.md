@@ -8,7 +8,7 @@ Since most of the heavy-lifting (deconvolution and segmentation) was performed b
 
 ## A. Installing cell acdc
 
-Up to date instructions for installing and using (cell-acdc)[https://github.com/SchmollerLab/Cell_ACDC/tree/main] are available in the [detailed documentation](https://cell-acdc.readthedocs.io/en/latest/index.html), so if the commands here do not work, you might need to update what needs to be done from there.
+Up to date instructions for installing and using [cell-acdc](https://github.com/SchmollerLab/Cell_ACDC/tree/main) are available in the [detailed documentation](https://cell-acdc.readthedocs.io/en/latest/index.html), so if the commands here do not work, you might need to update what needs to be done from there.
 
 1. If not present: install [mamba](https://github.com/conda-forge/miniforge)
 2. Create Mamba environment:  `mamba create -n acdc python=3.10`
@@ -69,6 +69,6 @@ Your files with the acdc correct file structure will be placed in a sub director
 
 You can directly jump to the "Launch GUI" button to use the gui with your data.
 
-There are a lot of great features you can do very easily on the gui, especially if you learn the keyboard shortcuts - hover over the buttons to get instructions, and check out the [user manual]("https://cell-acdc.readthedocs.io/en/latest/tooltips.html").  
+There are a lot of great features you can do very easily on the gui, especially if you learn the keyboard shortcuts - hover over the buttons to get instructions, and check out the [user manual](https://cell-acdc.readthedocs.io/en/latest/tooltips.html).  
 
 I particularly love the auto-pilot feature that lets you scroll through the segmented masks one by on at high magnification without having to zoom in and out all the time. 

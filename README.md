@@ -1,11 +1,11 @@
-# prepping for cell acdc
+# Prepping for cell acdc
 
 Make sure you have a conda environment called acdc with acdc installed. and make sure the bioio nd2 library is installed too:
 
 ```
 mamba activate acdc
 pip install bioio-nd2
-``
+```
 
 You start off with all your .nd2 files in a particular directory.
 

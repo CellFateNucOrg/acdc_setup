@@ -11,7 +11,7 @@ Since most of the heavy-lifting (deconvolution and segmentation) was performed b
 Up to date instructions for installing and using [cell-acdc](https://github.com/SchmollerLab/Cell_ACDC/tree/main) are available in the [detailed documentation](https://cell-acdc.readthedocs.io/en/latest/index.html), so if the commands here do not work, you might need to update what needs to be done from there.
 
 1. If not present: install [mamba](https://github.com/conda-forge/miniforge)
-2. Create Mamba environment:  `mamba create -n acdc python=3.10`
+2. Create Mamba environment:  `mamba create -n acdc python=3.11`
 3. Activate environment: `mamba activate acdc`
 4. Install some libraries: `conda install -c conda-forge pyqt qtpy pyqtgraph seaborn pytables bioio bioio-nd2`
 5. Install the latest version of cell-acdc: `pip install "git+https://github.com/SchmollerLab/Cell_ACDC.git"`

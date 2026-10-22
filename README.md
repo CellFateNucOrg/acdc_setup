@@ -18,7 +18,7 @@ Up to date instructions for installing and using [cell-acdc](https://github.com/
 
 ## B. Before you start cell-acdc
 
-1. Before you can run cell-acdc on the server, you need X windows to be active on your computer. For mac that means having **XQuartz** installed (and maybe iTerm instead of the normal terminal window, not sure), and for windows that means installing **Xming** and having Xlaunch active, as well as putty to connect to the server.
+1. Before you can run cell-acdc on the server, you need X windows to be active on your computer. For mac that means having **XQuartz** installed (and maybe iTerm instead of the normal terminal window, not sure), and for windows that means installing **Xming** and having Xlaunch active, as well as some unix terminal interface to ssh into the server (e.g. install putty, or use WSL).
 2. Make sure you have a conda environment called acdc with acdc installed (see above).
 3. Your images have been deconvoled with our [Deconwolf pipeline](https://github.com/CellFateNucOrg/Deconwolf)
 4. Your nuclei have been segmented with our [Cellpose-SAM pipeline](https://github.com/CellFateNucOrg/CPSAM)

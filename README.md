@@ -13,10 +13,8 @@ Up to date instructions for installing and using [cell-acdc](https://github.com/
 1. If not present: install [mamba](https://github.com/conda-forge/miniforge)
 2. Create Mamba environment:  `mamba create -n acdc python=3.11`
 3. Activate environment: `mamba activate acdc`
-4. Install some libraries: `conda install -c conda-forge pyqt qtpy pyqtgraph seaborn pytables bioio bioio-nd2`
-5. Install the latest version of cell-acdc: `pip install "git+https://github.com/SchmollerLab/Cell_ACDC.git"`
-
-
+4. Install the latest version of cell-acdc: `pip install "git+https://github.com/SchmollerLab/Cell_ACDC.git"`
+5. Install some libraries: `mamba install -c conda-forge pyqt qtpy pyqtgraph seaborn pytables bioio bioio-nd2`
 
 ## B. Before you start cell-acdc
 

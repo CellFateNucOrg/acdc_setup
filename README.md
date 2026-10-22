@@ -26,7 +26,7 @@ Up to date instructions for installing and using [cell-acdc](https://github.com/
 Your data should be organised as follows, where <src> is the name of the folder in which your .nd2 files are.
 
 ```
-    <src>/
+    <src_dir>/
         somefile.nd2
         anotherfile.nd2
         dw/
@@ -37,6 +37,8 @@ Your data should be organised as follows, where <src> is the name of the folder 
                 somefile_dw_mask.tif
                 anotherfile_dw_mask.tif
 ```
+
+If you have segmented on more than one channel then you will have subdirectories in the masks directory, e.g.: `<src_dir>/dw/masks/masks_GFP`
 
 ### Setting up the cell-acdc data structure
 

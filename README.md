@@ -23,7 +23,7 @@ Up to date instructions for installing and using [cell-acdc](https://github.com/
 3. Your images have been deconvoled with our [Deconwolf pipeline](https://github.com/CellFateNucOrg/Deconwolf)
 4. Your nuclei have been segmented with our [Cellpose-SAM pipeline](https://github.com/CellFateNucOrg/CPSAM)
 
-Your data should be organised as follows, where <src> is the name of the folder in which your .nd2 files are.
+Your data should be organised as follows, where _src_dir_ is the name of the folder in which your .nd2 files are.
 
 ```
     <src_dir>/

@@ -48,7 +48,7 @@ Cell acdc has a very specific data structure that must be followed for you to us
 - Edit the **setup_acdc.sh** script to point `src_dir` to the directory where you have the .nd2 files.
 - Edit the list of `rawChannels`: rawChannels are all the channels in your .nd2 files (in the correct order!).
 - Edit the list of `deconvolvedChannels`: deconvolvedChannels are all the channels in your _dw.tif files (in the correct order!), these may be the same as in rawChannels, but some could be missing (if you have a brightfield channel in your .nd2 file, for example). _Make sure the names of the channels agree with whatever you used in the deconvolution scripts._
-- Then run **setup_acdc.sh** it on slurm:
+- Then run **setup_acdc.sh** on slurm:
   
 ```
 sbatch setup_acdc.sh

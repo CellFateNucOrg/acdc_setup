@@ -2,9 +2,9 @@
 
 Cell-acdc can do many things, including segmentation, however, we already have very good scripts to do deconvolution and nuclear segmentation that work in batch mode on the server, so rather than trying to work with big data interactively, it is probably easiest to run those scripts and then feed in raw and deconvolved images and the nuclear segmentation masks into cell acdc and then use it interactively to delete/add/correct/split/merge masks.
 
-The only difficult thing is that cell-acdc has a very specific data structure, and so this repo contains scripts based on our deconvolution and masks folder structure and file naming in order to automatically create the correct data structure. It also contains instructions on how to install and use cell-acdc on the server. 
+The only difficult thing is that cell-acdc has a _very specific data structure_, and so this repo contains scripts based on our deconvolution and masks folder structure and file naming in order to automatically create the correct data structure. It also contains instructions on how to install and use cell-acdc on the server. 
 
-Since most of the heavy-lifting (deconvolution and segmentation) was performed before you use cell-acdc, you might find it easier to install cell acdc locally on your machine. As long as you have enough RAM to load the different channels and masks all at once into memory, then working like this with izbkingston mounted as a network drive might be easier/faster. But if your personal computer cannot cope, then you can use it from teh server, which requires a few more steps described below.
+Since most of the heavy-lifting (deconvolution and segmentation) was performed before you use cell-acdc, _you might find it easier to install cell acdc locally on your personal machine_. As long as you have enough RAM to load the different channels and masks all at once into memory, then working like this with izbkingston mounted as a network drive might be easier/faster. But if your personal computer cannot cope, then you can use it from the server, which requires a few more steps described below.
 
 ## A. Installing cell acdc
 
@@ -42,10 +42,13 @@ Your data should be organised as follows, where <src> is the name of the folder 
 
 Cell acdc has a very specific data structure that must be followed for you to use it. It does have its own data prep modules but since we need to add our own segmentation, it is easier doing it all with our own script that uses the data structure described above to create the right structure for acdc. 
 
-Clone this repository: `git clone git@github.com:CellFateNucOrg/acdc_setup.git`
-
-Edit the *setup_acdc.sh* script to point src_dir to the directory where you have the .nd2 files. then run it on slurm:
-
+- Clone this repository: `git clone git@github.com:CellFateNucOrg/acdc_setup.git`
+- Edit the **setup_acdc.sh** script to point `src_dir` to the directory where you have the .nd2 files.
+- Edit the list of `rawChannels`: rawChannels are all the channels in your .nd2 files (in the correct order!).
+- Edit the list of `deconvolvedChannels`: deconvolvedChannels are all the channels in your _dw.tif files (in the correct order!).
+- Make sure the names of the channels agree with whatever you used in the deconvolution scripts.
+- Then run **setup_acdc.sh** it on slurm:
+  
 ```
 sbatch setup_acdc.sh
 ```
